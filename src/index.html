@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Blurr</title>
+    <meta name="description" content="Basic HTML/Tailwind starter" />
+    <meta name="author" content="Daily Dev Tips" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+    <script src="barba.js" defer></script>
+  </head>
+  <body class="bg-background" data-barba="wrapper">
+    <!-- navbar -->
+    <nav class="py-[16px] px-[70px] flex items-center justify-between"  data-barba="container">
+      <div class="pt-[7px] pb-[5px]">
+        <img src="assets/logo.png" />
+      </div>
+      <div class="space-x-[5px] hidden md:block">
+        <span class="px-[32px] py-[12px] text-[12px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Lavori</span>
+        <span class="px-[32px] py-[12px] text-[12px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Cosa Facciamo</span>
+        <span class="px-[32px] py-[12px] text-[12px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Studio</span>
+        <span class="px-[32px] py-[12px] text-[12px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Contattaci</span>
+      </div>
+      <div class="w-[32px] hover:cursor-pointer md:hidden open-menu-button">
+        <img src="assets/img/menu.svg" />
+      </div>
+      <div class="absolute h-[60vw] lg:h-[20vw] top-0 -right-[40px] -z-50">
+        <img class="h-full" src="assets/img/header-shape.png">
+      </div>
+    </nav>
+
+    <!-- mobile navbar -->
+    <div class="w-full h-full py-[16px] px-[70px] fixed top-0 left-0 bg-background z-50 mobile-nav hidden">
+      <div class="flex items-center justify-between">
+        <div class="pt-[7px] pb-[5px]">
+          <img src="assets/logo.png" />
+        </div>
+        <div class="w-[24px] hover:cursor-pointer close-menu-button">
+          <img src="assets/img/close.svg" />
+        </div>
+      </div>
+      <div class="flex-col space-y-[5px] pt-[15px]">
+        <span class="block w-full px-[10px] py-[12px] text-[18px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Lavori</span>
+        <span class="block w-full px-[10px] py-[12px] text-[18px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Cosa Facciamo</span>
+        <span class="block w-full px-[10px] py-[12px] text-[18px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Studio</span>
+        <span class="block w-full px-[10px] py-[12px] text-[18px] text-main hover:text-black hover:bg-main hover:cursor-pointer">Contattaci</span>
+      </div>
+    </div>
+
+    <!-- header content section -->
+    <section class="pl-[12vw] py-[7vw]" data-barba="container">
+      <div class="text-main text-[8vw] lg:text-[6vw] w-8/12 lg:w-5/12 leading-[130%] lg:leading-[96%] tracking-[-0.05em]">
+        Uno studio che aiuta le aziende <i>digital</i> a creare soluzioni <i>digital</i>.
+      </div>
+    </section>
+
+    <!-- body content section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[7vw] relative">
+      <div class="absolute h-[60vw] lg:h-[20vw] top-0 left-0 -z-50">
+        <img class="h-full" src="assets/img/shape2.png">
+      </div>
+      <div class="flex flex-wrap items-start justify-center lg:justify-between">
+        <div class="w-12/12 mb-8 lg:w-5/12 lg:mb-none">
+          <img src="assets/img/photo.png"/>
+        </div>
+        <div class="flex-col w-12/12 lg:w-5/12">
+          <div class="flex items-center space-x-4">
+            <span class="h-[1px] w-[56px] bg-main"></span>
+            <span class="text-[2vw] md:text-[1.5vw] lg:text-[1vw] text-main font-bold">Nati con la voglia di creare il nuovo</span>
+          </div>
+          <div class="py-[25px] text-[6vw] md:text-[4.5vw] lg:text-[2.5vw] text-main leading-[120%] tracking-[5%]">
+            Amiamo comunicare attraverso creatività e la semplicità.
+          </div>
+          <div class="text-[4vw] md:text-[3.5vw] lg:text-[1.5vw] text-main leading-[140%] tracking-[-0.05em]">
+            La nostra passione per la creatività ci spinge a realizzare e sviluppare design unici, capaci di dare risalto alle caratteristiche principali delle imprese.<br/><br/>
+            Il nostro focus è B2B e lavoriamo direttamente con altre Web Agency / Freelancer / Consulenti per occuparci del prodotto.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- text section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[15vw] lg:py-[7vw]">
+      <div class="flex flex-wrap items-start justify-between">
+        <div class="flex-col w-12/12 lg:w-5/12">
+          <div class="flex items-center space-x-4">
+            <span class="h-[1px] w-[56px] bg-main"></span>
+            <span class="text-[2vw] md:text-[1.5vw] lg:text-[1vw] text-main font-bold">Nati con la voglia di creare il nuovo</span>
+          </div>
+          <div class="py-[25px] text-[6vw] md:text-[4.5vw] lg:text-[2.5vw] text-main leading-[120%] tracking-[5%]">
+            Amiamo comunicare attraverso creatività e la semplicità.
+          </div>
+        </div>
+        <div class="w-12/12 lg:w-5/12 pt-[60px] text-[4vw] md:text-[3.5vw] lg:text-[1.5vw] text-main leading-[140%] tracking-[-0.05em]">
+          La nostra passione per la creatività ci spinge a realizzare e sviluppare design unici, capaci di dare risalto alle caratteristiche principali delle imprese.<br/><br/>
+          Il nostro focus è B2B e lavoriamo direttamente con altre Web Agency / Freelancer / Consulenti per occuparci del prodotto.
+        </div>
+      </div>
+    </section>
+
+    <!-- text section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[15vw] lg:py-[7vw]">
+      <div class="px-[6vw]">
+        <div class="flex-col">
+          <div class="flex items-center space-x-4">
+            <span class="h-[1px] w-[56px] bg-main"></span>
+            <span class="text-[2vw] md:text-[1.5vw] lg:text-[1vw] text-main font-bold">Come possiamo aiutarti</span>
+          </div>
+          <div class="py-[25px] text-[6vw] md:text-[4.5vw] lg:text-[2.5vw] text-main leading-[120%] tracking-[5%]">
+            Ci siamo verticalizzati sulla creazione di siti web in Wordpress e Custom, la nostra esperienza è nelle tue mani.
+          </div>
+          <div class="text-[4vw] md:text-[3.5vw] lg:text-[1.5vw] text-main leading-[140%] tracking-[-0.05em]">
+            <i>Lavoriamo con 3 principali metodi di sviluppo in base al tipo di progetto</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- text section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[15vw] lg:py-[7vw]">
+      <div class="px-[6vw]">
+        <div class="flex-col space-y-[25px]">
+          <div class="flex items-start space-x-[2vw]">
+            <img alt="img" src="assets/img/first.png"/>
+            <div class="flex-col content-between">
+              <div class="text-[4.5vw] md:text-[4vw] lg:text-[2vw] text-main leading-[140%] tracking-[-0.05em]">Wordpress + Custom Frontend</div>
+              <div class="text-[3.5vw] md:text-[3vw] lg:text-[1vw] text-main leading-[140%] tracking-[-0.05em]">Se sai già che non metterai mano al layout del del tuo sito ma solo ai contenuti consigliamo una Soluzione Custom, più leggero, performante e più creativo.</div>
+            </div>
+          </div>
+          <div class="flex items-start space-x-[2vw]">
+            <img alt="img" src="assets/img/second.png"/>
+            <div class="flex-col content-between">
+              <div class="text-[4.5vw] md:text-[4vw] lg:text-[2vw] text-main leading-[140%] tracking-[-0.05em]">Wordpress + Elementor</div>
+              <div class="text-[3.5vw] md:text-[3vw] lg:text-[1vw] text-main leading-[140%] tracking-[-0.05em]">Se vuoi essere indipendente e avere la possibilità di modificare l’aspetto del tuo sito come e quando vuoi, sicuramente la soluzione con Elementor fa al caso tuo, è anche la soluzione più economica e veloce.</div>
+            </div>
+          </div>
+          <div class="flex items-start space-x-[2vw]">
+            <img alt="img" src="assets/img/third.png"/>
+            <div class="flex-col content-between">
+              <div class="text-[4.5vw] md:text-[4vw] lg:text-[2vw] text-main leading-[140%] tracking-[-0.05em]">Custom</div>
+              <div class="text-[3.5vw] md:text-[3vw] lg:text-[1vw] text-main leading-[140%] tracking-[-0.05em]">Se il sito è completamente statico e non c’è nessuna necessità di doverlo personalizzare costantemente la soluzione custom può essere un’ottima opzione.</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex py-[64px] justify-center hover:cursor-pointer">
+          <span class="bg-white font-bold text-black px-[32px] py-[10px]">Scopri tutti i nostri servizi</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- image section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[10vw] lg:py-[7vw]">
+      <div class="flex w-full justify-center">
+        <img alt="img" src="assets/img/bg.png"/>
+      </div>
+    </section>
+
+     <!-- text section -->
+     <section class="px-[6vw] lg:px-[20vw] py-[10vw] lg:py-[7vw]">
+      <div class="px-[6vw]">
+        <div class="flex-col">
+          <div class="flex items-center space-x-4">
+            <span class="h-[1px] w-[56px] bg-main"></span>
+            <span class="text-[2vw] md:text-[1.5vw] lg:text-[1vw] text-main font-bold">Alcune delle tecnologie che utilizziamo</span>
+          </div>
+          <div class="py-[22px] text-[6vw] md:text-[4.5vw] lg:text-[2.5vw] text-main leading-[120%] tracking-[5%]">
+            Figma / AdobeXD /Wordpress / Elementor / ACF / Wpml / Boostrap / Javascript
+          </div>
+          <div class="md:text-[3.5vw] lg:text-[1.5vw] text-main leading-[140%] tracking-[-0.05em]">
+            <i>/ e molto altro ancora</i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company Section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[10vw] lg:py-[7vw]">
+      <div class="px-[6vw]">
+        <div class="py-[22px] text-[6vw] md:text-[4.5vw] lg:text-[2.5vw] text-main leading-[120%] tracking-[5%] text-center">
+          Aziende con cui collaboriamo
+        </div>
+        <div class="flex-col space-y-[20px] marquee-container">
+          <div class="flex marquee">
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/italo_soft.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/alpsolution.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/kumbe.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/kiboko.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/parancho.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/vitamina.png"/>
+            </div>
+          </div>
+          <div class="flex marquee-reverse">
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/vitamina.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/kumbe.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/rvn.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/cima.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/alpsolution.png"/>
+            </div>
+            <div class="px-[20px] py-[30px] mx-[10px] my-[10px] rounded-[3px] bg-gray">
+              <img src="assets/img/kiboko.png"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- text section -->
+    <section class="px-[6vw] lg:px-[20vw] py-[10vw] lg:py-[7vw]">
+      <div class="px-[7vw]">
+        <div class=" text-[8vw] md:text-[4.5vw] lg:text-[2.5vw] text-main text-center leading-[120%] tracking-[5%]">
+          Parlaci del tuo prossimo progetto.
+        </div>
+        <div class="flex py-[64px] justify-center hover:cursor-pointer">
+          <span class="bg-white font-bold text-black px-[32px] py-[10px]">Contattaci ora</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <section class="px-[70px] pt-[28px]">
+      <div class="flex flex-wrap justify-between">
+        <div class="flex-col content-start py-[10px]">
+          <div class="text-main text-[36px] font-bold">Blurr</div>
+          <div class="text-main text-[24px]">Il tuo <br/>partner <br/>per il <br/>design e <br/>sviluppo</div>
+        </div>
+        <div class="flex justify-between items-start space-x-[50px] py-[10px]">
+          <div class="flex-col space-y-[20px]">
+            <span class="block text-white">Links</span>
+            <span class="block text-main">Home</span>
+            <span class="block text-main">Cosa Facciamo</span>
+            <span class="block text-main ">Studio</span>
+          </div>
+          <div class="flex-col space-y-[20px]">
+            <span class="block text-white">Studio</span>
+            <span class="block text-main">Via Valentini 9, 38060 Calliano (TN)</span>
+            <span class="block text-white">Contatti</span>
+            <span class="block text-main">aryan@blurr.it</span>
+            <span class="block text-main">+39 3770935429</span>
+          </div>
+        </div>
+      </div>
+      <hr class="text-main my-[20px]">
+      <span class="text-main">Copyright 2022 Blurr.it | p.va 02559530221</span>
+    </section>s
+  </body>
+  
+</html>
